@@ -1,7 +1,6 @@
 package Framework;
 
-import base.Configuration;
-import base.Mode;
+import base.*;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,6 +10,10 @@ import java.util.Set;
 public class CLI {
 
     Set<Option> options = new HashSet<>();
+
+    public Set<Option> getOptions() {
+        return options;
+    }
 
     public static void execute(Application appli, String... args){
         boolean finOptions = false;
@@ -64,7 +67,7 @@ public class CLI {
     }
 
     public void addOption(Option option) {
-        options.add(option);
+        this.options.add(option);
     }
 
     public static void main(String[] args) {
